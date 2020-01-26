@@ -1,0 +1,41 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+@bgColorHtml: #4A525A; //#424242;
+@colorHtml: #DDDDDD;
+@bgColorBody: #fff;
+@fontFamilyBody: Verdana,Geneva,sans-serif;
+
+html {
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+    color: @colorHtml;
+    padding: 0;
+    margin: 0;
+    line-height: 1.15;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    //background-color: @bgColorBody;
+    font: 100.01%/1.5 @fontFamilyBody;
+}
+
+div {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    background-color: transparent;
+    color: #33b;
+    text-decoration: underline;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}

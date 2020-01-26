@@ -1,0 +1,20 @@
+{
+  "name": "compile-less",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example program to test the less compiler.",
+  "scripts": {
+    "build": "npm run build-css | npm run build-min",
+    "build-css": "src/node_modules/.bin/lessc kmom01_v2.less ../htdocs/css/kmom01_v2.css",
+    "build-min": "src/node_modules/.bin/lessc --clean-css kmom01_v2.less ../htdocs/css/kmom01_v2.min.css",
+    "clean": "rm -f kmom01.less htdocs/css/kmom01_v2.css kmom01_v2.less ../htdocs/css/kmom01_v2.min.css",
+    "clean-all": "npm run clean | rm -rf node_modules package-lock.json",
+    "test": "node_modules/.bin/lessc --lint kmom01.less"
+  },
+  "author": "Jakub Roman Lenckiewicz, jakubl831@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "less": "^3.10.3",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}
